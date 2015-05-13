@@ -5,5 +5,5 @@
 	\organisation:	"Art University Graz, University Cologne, University of the Arts Berlin, IMM Düsseldorf",
 	\since: 		"2007",
 	\version:		"0.1",
-	\dependencies:  ["ListeningClocks", "GamelanSynthesis"]
+	\dependencies:  ["ListeningClocks", "GamelanSynthesis", "GamelanPatterns", "EventArray"]
 )
