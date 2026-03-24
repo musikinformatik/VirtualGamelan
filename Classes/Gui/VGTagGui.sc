@@ -2,7 +2,7 @@ VGTagGui {
 	var <parent, <bounds, <title, <event, <choices, <keys;
 	var <>action;
 	var <comp;
-	var keys, allViews, updateActions;
+	var allViews, updateActions;
 	
 	*new { |parent, bounds, title, event, choices, keys|
 		^super.newCopyArgs(parent, bounds, title, event, choices, keys).init
@@ -213,7 +213,7 @@ VGTextView {
 						.enterInterpretsSelection_(false)
 						.usesTabToFocusNextView_(true)
 						.font_(Font("Helvetica", 12))
-						.keyDownAction_({Ê|v, char, mod, keycode| 
+						.keyDownAction_({ÃŠ|v, char, mod, keycode| 
 								var res;
 								
 								if(mod == 256 and: { [3, 13].includes(keycode) }) { 
@@ -226,7 +226,7 @@ VGTextView {
 										prevString = v.string;
 									} {
 										v.background = Color.red;
-										fork {Ê0.2.wait; defer { 
+										fork {ÃŠ0.2.wait; defer { 
 											v.background = Color.white;
 											v.string = prevString; 
 											}
@@ -241,7 +241,7 @@ VGTextView {
 								};
 								
 				});
-				fork {Ê0.2.wait; defer {Ê prevString = res.string } };
+				fork {ÃŠ0.2.wait; defer {ÃŠ prevString = res.string } };
 			^res;
 	}
 	
